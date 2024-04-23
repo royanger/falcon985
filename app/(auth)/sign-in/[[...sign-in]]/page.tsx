@@ -1,17 +1,15 @@
-
-import { SignIn } from "@clerk/nextjs"
+import { SignIn } from "@clerk/nextjs";
 
 export default function SignInPage({
     params,
     searchParams,
 }: {
-    params: { signin: string }
-    searchParams?: { [key: string]: string | undefined }
+    params: { signin: string };
+    searchParams?: { [key: string]: string | undefined };
 }) {
     return (
         <div className="">
             <SignIn
-                fallbackRedirectUrl="/"
                 appearance={{
                     elements: {
                         socialButtonsBlockButtonText: "text-sm",
@@ -26,5 +24,5 @@ export default function SignInPage({
                 }}
             />
         </div>
-    )
+    );
 }
